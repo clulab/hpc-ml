@@ -1,0 +1,35 @@
+BootStrap: docker
+From: nvidia/cuda:10.1-cudnn7-runtime-centos6
+
+%help
+  Centos 6, Java 8, Python 3.6, and popular ML libraries used by CLU Lab 
+
+%post
+  # install Java and Python
+  yum -y install epel-release
+  yum -y groupinstall "Development Tools"
+  yum -y install java-1.8.0-openjdk
+
+  # install Python 3.6 from source since it's not in a Centos 6 repository
+  yum -y install bzip2-devel libffi-devel ncurses-devel gdbm-devel xz-devel sqlite-devel openssl-devel tcl-devel tk-devel uuid-devel readline-devel zlib-devel
+  curl -O https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+  tar -xzf Python-3.6.9.tgz
+  rm Python-3.6.9.tgz
+  cd Python-3.6.9
+  ./configure --enable-optimizations
+  make altinstall
+  cd ..
+
+  # install Python modules
+  python3.6 -m ensurepip
+  pip3.6 install --upgrade pip setuptools
+  pip3.6 install --upgrade memory-profiler numpy scipy scikit-learn tensorflow-gpu tensorboard tensorboardX keras torch torchvision pytorch-transformers mock pandas spacy
+
+  # in-container bind points for shared filesystems
+  mkdir -p /extra /xdisk /uaopt /cm/shared
+
+%test
+  java -version
+  python3.6 --version
+  pip3.6 list
+
