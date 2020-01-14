@@ -26,7 +26,7 @@ From: nvidia/cuda:10.0-cudnn7-runtime-centos7
   # install NVIDIA apex
   git clone https://github.com/NVIDIA/apex
   cd apex
-  pip3.7 install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+  pip3.7 install -v --no-cache-dir ./
 
   # in-container bind points for shared filesystems
   mkdir -p /extra /xdisk /uaopt /cm/shared
