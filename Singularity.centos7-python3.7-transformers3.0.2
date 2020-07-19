@@ -24,7 +24,7 @@ From: nvidia/cuda:10.1-cudnn7-devel-centos7
   cd ..
 
   # install Python modules
-  pip3.7 install --upgrade pip setuptools
+  pip3.7 install --upgrade pip setuptools wheel
   pip3.7 install --upgrade memory-profiler mock numpy scipy scikit-learn pandas pytest spacy seqeval psutil sacrebleu
   pip3.7 install --upgrade -f https://download.pytorch.org/whl/torch_stable.html torch==1.5.0+cu101
   pip3.7 install --upgrade tensorflow~=2.2.0 tensorflow_addons tensorboard tensorboardX torchvision~=0.6.0 transformers~=3.0.2
