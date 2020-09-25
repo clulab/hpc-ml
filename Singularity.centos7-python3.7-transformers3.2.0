@@ -25,9 +25,10 @@ From: nvidia/cuda:10.1-cudnn7-devel-centos7
 
   # install Python modules
   pip3.7 install --upgrade pip setuptools wheel
-  pip3.7 install --upgrade memory-profiler mock numpy scipy scikit-learn pandas pytest spacy seqeval psutil sacrebleu click-7.1.2 dataclasses-0.7 filelock-3.0.12 regex-2020.7.14 sacremoses-0.0.43 sentencepiece-0.1.91 tokenizers-0.8.1rc2
-  pip3.7 install --upgrade -f https://download.pytorch.org/whl/torch_stable.html torch==1.5.1+cu101
-  pip3.7 install --upgrade tensorflow~=2.2.0 tensorflow_addons tensorboard tensorboardX torchvision~=0.6.0 transformers~=3.0.2
+  pip3.7 install --upgrade memory-profiler mock numpy scipy scikit-learn pandas pytest spacy
+  pip3.7 install --upgrade -f https://download.pytorch.org/whl/torch_stable.html torch=1.6.0+cu101 torchvision=0.7.0+cu101
+  pip3.7 install --upgrade tensorflow~=2.3.0 tensorflow_addons tensorboard tensorboardX
+  pip3.7 install --upgrade transformers~=3.2.0
 
   # install NVIDIA apex
   git clone https://github.com/NVIDIA/apex
