@@ -10,4 +10,4 @@ Note that there are [hard limits on how many times a container can be pulled fro
 ```
 singularity pull shub://clulab/hpc-ml:centos7-python3.7-transformers3.2.0
 ```
-That will download a Singularity image named `hpc-ml_centos7-python3.7-transformers3.0.2.sif` that you can then use with other Singularity commands.
+That will download a Singularity image named `hpc-ml_centos7-python3.7-transformers3.2.0.sif` that you can then use with other Singularity commands.
