@@ -1,7 +1,7 @@
 # hpc-ml: Machine-learning Singularity images for UA HPC
 The recipes in this repository are designed for the University of Arizona High Performance Computing systems.
 They build Singularity images that include common machine learning libraries including scikit-learn, tensorflow, keras, torch, as well as the Nvidia CUDNN.
-
+To activate singularity on hpc, use "module load singularity", without quotes. And then you can execute singularity commands.
 ## Usage
 
 This GitHub repository is connected to Singularity Hub (https://singularity-hub.org/).
