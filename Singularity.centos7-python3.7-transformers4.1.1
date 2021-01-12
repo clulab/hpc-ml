@@ -30,11 +30,6 @@ From: nvidia/cuda:10.1-cudnn7-devel-centos7
   pip3.7 install --upgrade tensorflow~=2.3.0 tensorflow_addons tensorboard tensorboardX
   pip3.7 install --upgrade transformers~=4.1.1
 
-  # install NVIDIA apex
-  git clone https://github.com/NVIDIA/apex
-  cd apex
-  pip3.7 install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
-
   # in-container bind points for shared filesystems
   mkdir -p /extra /xdisk /uaopt /cm/shared
 
